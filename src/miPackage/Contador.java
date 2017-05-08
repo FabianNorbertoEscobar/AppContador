@@ -45,14 +45,16 @@ public class Contador extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 300, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(148, 0, 211));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		this.setLocationRelativeTo(null);
 		
 		JLabel lblContador = new JLabel("CONTADOR");
+		lblContador.setForeground(new Color(255, 255, 0));
 		lblContador.setHorizontalAlignment(SwingConstants.CENTER);
-		lblContador.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblContador.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblContador.setBounds(90, 26, 103, 35);
 		contentPane.add(lblContador);
 		
@@ -67,6 +69,7 @@ public class Contador extends JFrame {
 		textField.setText("0");
 		
 		JButton btnContar = new JButton("Contar");
+		btnContar.setBackground(new Color(255, 255, 0));
 		btnContar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				textField.setText(String.valueOf(Integer.parseInt(textField.getText()) + 1));
